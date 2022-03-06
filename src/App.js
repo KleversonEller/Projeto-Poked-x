@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Pokedex from './components/pokedex';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './components/Routes';
 import './App.css';
 
 class App extends Component {
@@ -9,9 +9,7 @@ class App extends Component {
       <main>
         <h1>POKEDEX</h1>
         <BrowserRouter>
-          <Switch>
-            <Route path={'/'} component={Pokedex} />
-          </Switch>
+          <Routes />
         </BrowserRouter>
       </main>
     );

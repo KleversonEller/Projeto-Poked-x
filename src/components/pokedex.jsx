@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Pokemon from './pokemon';
 import pokemons from '../data';
+import { Link } from 'react-router-dom';
 import './pokedex.css'
 
 class Pokedex extends Component {
@@ -40,6 +41,9 @@ class Pokedex extends Component {
     render(){
         return(
             <div>
+                <nav>
+                    <Link to='/'>Home</Link>
+                </nav>
                 <section className='container'>
                     {this.pokemonList()[this.state.pokemonIndex]}
                 </section>

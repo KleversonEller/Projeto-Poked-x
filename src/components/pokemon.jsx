@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './pokemon.css';
 
@@ -12,7 +13,7 @@ class Pokemon extends Component {
                         <p> {catchPokemon.name} </p>
                         <p> {catchPokemon.type} </p>
                         <p> {catchPokemon.averageWeight.value}{catchPokemon.averageWeight.measurementUnit}</p>
-                        <a href={catchPokemon.moreInfo} target='_blank'> {catchPokemon.name} Wiki</a>
+                        <Link to={`/wiki/${catchPokemon.id}`}> {catchPokemon.name} Wiki</Link>
                     </div>
                     <img src={catchPokemon.image} alt={`Essa é uma ilustração do ${catchPokemon.name}`} />
                 </div>
