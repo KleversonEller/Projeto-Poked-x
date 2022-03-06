@@ -11,6 +11,9 @@ class Navbar extends Component {
             <div>
                 <Link to='/About'>About</Link>
             </div>
+            <div>
+                <Link to='/Favorite'>Favorite Pokemons</Link>
+            </div>
             </nav>
         )
     }
