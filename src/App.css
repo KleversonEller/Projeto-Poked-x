@@ -16,3 +16,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+nav {
+    display: flex;
+    width: 450px;
+    justify-content: space-evenly;
+}

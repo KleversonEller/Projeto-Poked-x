@@ -41,9 +41,6 @@ class Pokedex extends Component {
     render(){
         return(
             <div>
-                <nav>
-                    <Link to='/'>Home</Link>
-                </nav>
                 <section className='container'>
                     {this.pokemonList()[this.state.pokemonIndex]}
                 </section>

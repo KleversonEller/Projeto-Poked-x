@@ -28,7 +28,7 @@ Pokemon.propTypes = {
         type: PropTypes.string,
         averageWeight: PropTypes.shape({
         measurementUnit: PropTypes.string,
-        value: PropTypes.number,
+        value: PropTypes.string,
         }),
         image: PropTypes.string,
     }).isRequired,
