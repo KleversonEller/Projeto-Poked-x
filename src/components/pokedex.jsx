@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import Pokemon from './pokemon';
 import pokemons from '../data';
-import { Link } from 'react-router-dom';
 import './pokedex.css'
 
 class Pokedex extends Component {
@@ -25,7 +24,8 @@ class Pokedex extends Component {
     }
 
     pokemonList () {
-        return pokemons.filter((filtraObjeto) => this.state.pokemonType !== 'all' ? filtraObjeto.type === this.state.pokemonType : filtraObjeto).map((objeto) => <Pokemon key={objeto.id} catchPokemon={ objeto} />)
+        const {favorite} = this.props;
+        return pokemons.filter((filtraObjeto) => this.state.pokemonType !== 'all' ? filtraObjeto.type === this.state.pokemonType : filtraObjeto).map((objeto) => <Pokemon key={objeto.id} favorite={favorite} catchPokemon={ objeto} />)
     }
 
     pokemonSelect () {

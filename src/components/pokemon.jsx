@@ -1,11 +1,12 @@
 import React,{Component} from 'react';
+import { AiTwotoneStar } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './pokemon.css';
 
 class Pokemon extends Component {
     render () {
-        const {catchPokemon} = this.props
+        const {catchPokemon, favorite} = this.props
         return (
             <section>
                 <div className='flex-container'>
@@ -16,6 +17,7 @@ class Pokemon extends Component {
                         <Link to={`/wiki/${catchPokemon.id}`}> {catchPokemon.name} Wiki</Link>
                     </div>
                     <img src={catchPokemon.image} alt={`Essa é uma ilustração do ${catchPokemon.name}`} />
+                    {favorite.some((objeto) => objeto[catchPokemon.id]) && <AiTwotoneStar />}
                 </div>
             </section>
         )
