@@ -1,4 +1,4 @@
-.container {
+.container2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -17,4 +17,12 @@ button {
 }
 .next {
     background-color: rgba(156, 76, 1, 0.8);
+}
+
+.container {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }

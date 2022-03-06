@@ -14,6 +14,13 @@ class App extends Component {
     }
   }
 
+  componentDidMount () {
+    JSON.parse(localStorage.getItem('favoriteListPokemon')) !== null 
+      && this.setState({
+      favorite: JSON.parse(localStorage.getItem('favoriteListPokemon'))
+    }, this.listFavorite)
+  }
+
   favoritarPokemon = (event) => {
     const name = event.target.name
     this.setState((favotiteNew) => ({
@@ -23,10 +30,17 @@ class App extends Component {
     }), this.listFavorite)
   }
 
-listFavorite = () => this.setState({ 
-  favoriteList: this.state.favorite.filter((objeto) => objeto[objeto.id.toString()])
-  });
+listFavorite = () => {
+  const pokemonsFavoritados = this.state.favorite.filter((objeto) => objeto[objeto.id.toString()])
+  this.setState({ 
+  favoriteList: pokemons.filter((objeto) =>
+  pokemonsFavoritados.some((idSalvo) => idSalvo.id === objeto.id))
+  }, this.save)
+};
 
+save = () => {
+  localStorage.setItem('favoriteListPokemon', JSON.stringify(this.state.favorite))
+}
 
   render() {
     return (
