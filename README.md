@@ -9,24 +9,24 @@ Temos 3 menus de navegação, sendo eles `Home`, `About` e `Favorite Pokemons`:
 Na pagina `Home` temos uma pequena lista de Pokemons e alguns filtros de navegação onde podemos filtrar de acordo com o tipo de Pokemon e navegar entre os Pokemons apenas daquele tipo.
 Tendo uma ilustração do Pokemon e um link `Wiki` que fornece mais informações sobre aquele Pokemon especifico, nessa pagina podemos favoritar e desfavoritar um Pokemon.
 
-gif dos filtros
+![img](home-gif.gif)
 
 ## About
 Na pagina `About` temos um breve resumo do que é uma Pokedéx, e uma imagem ilustrativa de uma modelo de Pokedéx.
 
-gif do about
+![img](about-gif.gif)
 
 ## Favorite Pokemons
 Na pagina de `Favorite` temos todos os Pokemons marcados como favoritos.
 
-gif do favorite
+![img](favorite-gif.gif)
 
 As alterações de favoritos são salvas no local storage e são mantidas/restauradas ao atualizar a pagina.
 
 ## Técnologias usadas
 
 Front-end:
-> Desenvolvido usando: React, Redux, CSS3, HTML5, ES6
+> Desenvolvido usando: React, CSS3, HTML5, ES6
 
 ## Instalando Dependências
 
