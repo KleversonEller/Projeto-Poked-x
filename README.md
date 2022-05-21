@@ -26,7 +26,7 @@ As alterações de favoritos são salvas no local storage e são mantidas/restau
 ## Técnologias usadas
 
 Front-end:
-> Desenvolvido usando: React, CSS3, HTML5, ES6
+> Desenvolvido usando: React, CSS3, JavaScript ES6
 
 ## Instalando Dependências
 
